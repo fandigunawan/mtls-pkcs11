@@ -25,4 +25,5 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{secrets.GORELEASER_TOKEN}}
+          CGO_ENABLED: 1
 

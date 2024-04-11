@@ -21,6 +21,7 @@ jobs:
     runs-on: ${{matrix.os}}
     env:
       GOFLAGS: -mod=vendor
+      CGO_ENABLED: 1
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -40,6 +41,7 @@ jobs:
     env:
       GOFLAGS: -mod=vendor
       GOARCH: amd64
+      CGO_ENABLED: 1
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
