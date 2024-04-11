@@ -56,10 +56,13 @@ jobs:
             ${{runner.os}}-go-
       - name: Build linux binary
         run: |
+          GOOS=linux go mod vendor
           GOOS=linux go build
       - name: Build windows binary
         run: |
+          GOOS=windows go mod vendor
           GOOS=windows go build
       - name: Build darwin binary
         run: |
+          GOOS=darwin go mod vendor
           GOOS=darwin go build
